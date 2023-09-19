@@ -1,1 +1,55 @@
-<p>home works!</p>
+<main-navigation></main-navigation>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<body>
+  <div class="container">
+    <div class="header">Dashboard</div>
+    <div class="container-two">
+      <div class="user-engagements">
+        <div class="live-figure">
+          <span id="figure">420</span><br />
+          <span id="label">User Engagements</span>
+        </div>
+        <div class="drop-down">
+          <span id="figureTwo">65% <i class="fa fa-level-up"></i></span><br />
+          <span id="labelTwo">over the last</span>
+
+          <div class="dropdown">
+            <button class="dropbtn">
+              7 days <i class="fa fa-sort-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="/home">7 days</a>
+              <a routerLink="/home">15 days</a>
+              <a routerLink="/home">30 days</a>
+              <a routerLink="/home">60 days</a>
+              <a routerLink="/home">100 days</a>
+              <a routerLink="/home">1 year</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-three">
+      <a routerLink="/bestseller">
+        <div class="best-seller">
+          <img src="./../../../../../assets/bar_chart.png" /><br />
+          <span class="label-three">Best-Seller</span>
+        </div></a
+      >
+      <a routerLink="/engagements">
+        <div class="user-engagement-figure">
+          <img
+            src="./../../../../../assets/line_chart.png"
+            style="height: 75%"
+          /><br />
+          <span class="label-three">User Engagement</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>

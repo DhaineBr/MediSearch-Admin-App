@@ -10,6 +10,7 @@ import { UsersComponent } from './MainNavigation/users/users.component';
 import { ArchiveComponent } from './MainNavigation/archive/archive.component';
 import { ReceptionComponent } from './MainNavigation/reception/reception.component';
 import { SettingsComponent } from './MainNavigation/settings/settings.component';
+import { MainNavigationComponent } from './MainNavigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SettingsComponent } from './MainNavigation/settings/settings.component'
     UsersComponent,
     ArchiveComponent,
     ReceptionComponent,
-    SettingsComponent
+    SettingsComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
