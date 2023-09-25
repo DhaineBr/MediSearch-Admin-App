@@ -1,44 +1,37 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
-
 <body>
   <div class="sideNav">
     <div class="container">
       <div class="sideLogos">
         <a
-          routerLink="/home"
+          routerLink="/home/dashboard"
           class="sideButtons"
           routerLinkActive="active"
           class="sideButtons"
           ><i class="fa fa-dashboard"></i></a
         ><br /><br />
         <a
-          routerLink="/reception"
-          class="sideButtons"
-          routerLinkActive="active"
-          class="sideButtons"
-          ><i class="fa fa-users"></i></a
-        ><br /><br />
-        <a
-          routerLink="/stores"
+          routerLink="/home/stores"
           class="sideButtons"
           routerLinkActive="active"
           class="sideButtons"
           ><i class="fa fa-map"></i></a
         ><br /><br />
         <a
-          routerLink="/users"
+          routerLink="/home/users"
           class="sideButtons"
           routerLinkActive="active"
           class="sideButtons"
-          ><i class="fa fa-line-chart"></i></a
+          ><i class="fa fa-address-book"></i></a
         ><br /><br />
         <a
-          routerLink="/settings"
+          routerLink="/home/archive"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-archive"></i></a
+        ><br /><br />
+        <a
+          routerLink="/home/settings"
           class="sideButtons"
           routerLinkActive="active"
           class="sideButtons"
@@ -49,7 +42,12 @@
 
     <br /><br />
     <div class="sideFooter">
-      <button class="signOut"><i class="fa fa-sign-out"></i></button>
+      <a routerLink="/login">
+        <button class="signOut"><i class="fa fa-sign-out"></i></button>
+      </a>
     </div>
+  </div>
+  <div class="router">
+    <router-outlet></router-outlet>
   </div>
 </body>
