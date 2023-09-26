@@ -9,6 +9,7 @@ import { ArchiveComponent } from './archive/archive.component';
 import { StoresComponent } from './stores/stores.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MainNavigationRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    MatSlideToggleModule    
   ]
 })
 export class MainNavigationModule { }

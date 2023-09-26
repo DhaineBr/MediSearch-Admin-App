@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavigationModule } from './MainNavigation/main-navigation.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { MainNavigationModule } from './MainNavigation/main-navigation.module';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MainNavigationModule
+    MainNavigationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

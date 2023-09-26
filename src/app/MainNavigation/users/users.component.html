@@ -1,40 +1,39 @@
 <body>
   <div class="container">
     <div class="header">Activity</div>
-    <div class="container-two">
-      <div class="user-engagements">
-        <div class="live-figure">
-          <span id="figure">420</span><br />
-          <span id="label">User Engagements</span>
-        </div>
-        <div class="drop-down">
-          <span id="figureTwo">65% <i class="fa fa-level-up"></i></span><br />
-          <span id="labelTwo">over the last</span>
+    
+    <div class="topnav">
+      <div class="search-container">
+        <input type="text" placeholder="Search.." />
 
-          <div class="dropdown">
-            <button class="dropbtn">
-              7 days <i class="fa fa-sort-down"></i>
-            </button>
-          </div>
-        </div>
+        <button id="searchButton">
+          <i class="fa fa-search" style="color: white; font-size: 1.25vw"></i>
+        </button>
       </div>
     </div>
-    <div class="container-three">
-      <a routerLink="/bestseller">
-        <div class="best-seller">
-          <img src="./../../../../../assets/bar_chart.png" /><br />
-          <span class="label-three">Best-Seller</span>
-        </div></a
-      >
-      <a routerLink="/engagements">
-        <div class="user-engagement-figure">
-          <img
-            src="./../../../../../assets/line_chart.png"
-            style="height: 75%"
-          /><br />
-          <span class="label-three">User Engagement</span>
-        </div>
-      </a>
+    
+    <div class="users-list-container">
+      <table class="users-list">
+        <tr class="table-header">
+          <th>ID</th>
+          <th>User</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Action</th>
+          <th>Description</th>
+
+        </tr>
+
+        <tr class="table-content">
+          <td>1234</td>
+          <td>Geng Geng</td>
+          <td>09/26/2023</td>
+          <td>10:53 PM</td>
+          <td>Gang Meetup</td>
+          <td>May baril at puno ng pera ang bibig</td>
+        </tr>
+      </table>
     </div>
   </div>
+
 </body>
