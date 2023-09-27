@@ -14,7 +14,7 @@
     top: 50%;
     left: 53%;
     z-index: 9999;
-    overflow: auto;
+    overflow: scroll;
   }
   
   .content  {
@@ -24,7 +24,8 @@
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
-    margin-top: 5%;
+    margin-top: 1%;
+
   }
   
   
@@ -45,8 +46,6 @@
   
   .archive-list-container {
     width: 95%;
-    max-height: 70%;
-    overflow-y: auto;
     background-color: transparent;
     border-radius: 1rem;
     border-style: hidden;  
@@ -54,10 +53,10 @@
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    overflow: auto;
     z-index: 902;
     color: black;
-    transform: translate(0%, -50%);
+    overflow-y: scroll;
+    max-height: 47.5%;
   }
   
   .archive-list  {
@@ -65,8 +64,8 @@
     table-layout: auto;
     border-style: hidden;
     z-index: 902;
-    max-height: 70%;
     padding: 1%;
+    margin: auto;
   }
   
   .table-header {
@@ -157,22 +156,37 @@
     padding: 0.4% 1%;
     border-radius: 2rem;
     border-style: hidden;
-    color: white;
     margin: 0 2% 0 0;
-    position: sticky;
+    position: relative;
+    transition: all 0.5s ease;
+    transform: scale(1);
+    text-shadow: 0.05rem 0.05rem 0.10rem ;
   }
 
-  .restore:hover, .delete:hover {
-    transform: scale(1.5);
-    transition: all 0.5s ease;
+  .restore:hover {
+    transform: scale(1.25);
+    border-radius: 2rem;
+    background-color: #04AA6D;
+    color: white;
+    text-shadow: none;
+  }
+
+  .delete:hover {
+    transform: scale(1.25);
+    border-radius: 2rem;
+    background-color: #AA0441;
+    color: white;
+    text-shadow: none;
   }
   
   .restore  {
-    background-color: #04AA6D;
+    color: #04AA6D;
+    background-color: transparent;
   }
 
   .delete {
-    background-color: #AA0441;
+    color: #AA0441;
+    background-color: transparent;
   }
   
       /* For Chrome, Safari, and Opera */
