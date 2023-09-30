@@ -62,6 +62,7 @@ body  {
   text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border-style: hidden;
+  transition: background-color 0.3s ease;
 }
 
 .sideButtons:hover  {
