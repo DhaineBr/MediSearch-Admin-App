@@ -41,7 +41,7 @@
   float: left;
   width: 55%;
   height: 130%; 
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;  
 }
 
 .data {
@@ -54,7 +54,7 @@
   overflow-y: scroll;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0; 
 }
 
 .pharmacy-data  {
@@ -68,7 +68,7 @@
   margin: auto;
   margin-bottom: 2%;
   margin-top: 2%;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 0.3rem 1.2rem;
   color: #55665e
 }
 
@@ -144,5 +144,4 @@ img {
   width: 95%;
   padding: 1% 2%;
   color: #55665e;
-  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
 }

@@ -43,7 +43,7 @@
     margin-bottom: 1%;
     border-style: hidden;
     border-radius: 1.5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    
+    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0;   
     background-color: white;
 }
 
@@ -58,7 +58,7 @@
   margin-bottom: 2%;
   border-style: hidden;
   border-radius: 1.5rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    
+  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0;    
   background-color: white;
 }
 
@@ -69,7 +69,6 @@
     width: 95%;
     padding: 1% 2%;
     color: #55665e;
-    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .live-figure {
@@ -82,7 +81,7 @@
     border-radius: 1.5rem;
     background-color: white;
     color: #55665e;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 25px -10px inset, rgba(0, 0, 0, 0.3) 0px 10px 20px -18px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 1rem 2.5rem -1rem inset, rgba(0, 0, 0, 0.3) 0px 1rem 2rem -1.8rem inset;
     background-color: #F8F8EC;
   }
 
@@ -175,7 +174,7 @@
     padding: 0 0 1% 0;
     border-radius: 2rem;
     color: #55665e;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px; 
+    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0; 
     background-color: white;  
     height: 100%;
 
@@ -191,7 +190,7 @@
     padding: 0 0 1% 0;
     border-radius: 2rem;
     color: #55665e;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;  
+    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0; 
     height: 100%; 
     background-color: white;
 

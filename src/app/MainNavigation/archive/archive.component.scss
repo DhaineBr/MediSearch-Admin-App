@@ -36,8 +36,6 @@
     width: 95%;
     padding: 1% 2%;
     color: #55665e;
-    text-shadow: 3px 3px 9px rgb(255, 255, 255);
-    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
   }
 
   th, td  {
@@ -49,7 +47,7 @@
     background-color: transparent;
     border-radius: 1rem;
     border-style: hidden;  
-    box-shadow: rgba(100, 100, 111, 0.4) 0px 5px 30px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;  
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -113,7 +111,7 @@
         margin-right: 0;
         font-size: 1.5vw;
         border-radius: 1rem 0 0 1rem;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.1) 0px 4px 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0; 
         outline: none;
         width: 90%;
       }
@@ -138,7 +136,7 @@
         margin: 0 0 0 0;
         width:10%;
         height: inherit;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.1) 0px 4px 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0; 
       }
   
   input[type="checkbox"]  {
