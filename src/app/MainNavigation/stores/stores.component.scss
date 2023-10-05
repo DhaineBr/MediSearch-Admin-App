@@ -1,3 +1,5 @@
+@import "~leaflet/dist/leaflet.css";
+
 .container {
   border-style: hidden;
   width: 90%;
@@ -37,17 +39,30 @@
   border-style: hidden;
   border-radius: 1rem;
   margin: 1% 0 0 2%;
+  height: 70vh;
   background-color: white;
   float: left;
   width: 55%;
-  height: 130%; 
   box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#map {
+  height: 57.5vh; 
+  border-style: hidden;
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.1rem 0.3rem 0rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.2rem 0rem;
 }
 
 .data {
   float: right;
   width: 40%;
-  height: 130%; 
+  height: 70vh; 
   border-style: hidden;
   text-align: center;
   margin: 1% 2% 0 0;
