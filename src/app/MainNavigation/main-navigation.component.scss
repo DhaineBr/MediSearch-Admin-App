@@ -28,10 +28,9 @@ body  {
   border-style: hidden;
   text-align: center;
   border-radius: 0.5rem;
-  background-color: rgb(236, 236, 236);
+  background-color: #F8F8EC;
   font-size: 3vw;
   color: #AA0441;
-  box-shadow: rgba(0, 0, 0, 0.3) 1.95px 3px 3px;
   transition: all 0.3s ease;
   transform: scale(1);
   position: relative;
@@ -46,8 +45,8 @@ body  {
 
 .signOut:hover {
   background-color: #AA0441;
-  color: rgb(236, 236, 236);
-  transform: scale(1.7);
+  color: #F8F8EC;
+  transform: scale(1.25);
   box-shadow: none;
 }
 
@@ -57,10 +56,9 @@ body  {
 }
 
 .sideButtons {
-  color: white;
+  color: #F8F8EC;
   font-size: 3vw;
   margin: 2% 0 20% 0;
-  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border-style: hidden;
   transition: background-color 0.3s ease;
@@ -76,7 +74,7 @@ body  {
 }
 
 .sideButtons i:hover  {
-  transform: scale(1.5)
+  transform: scale(1.25)
 }
 
 
