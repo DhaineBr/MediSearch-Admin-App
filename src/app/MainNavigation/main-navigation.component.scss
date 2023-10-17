@@ -18,6 +18,7 @@ body  {
   position: relative;
   max-height: 100%;
   overflow-y: hidden; /* Disable vertical scroll */
+  z-index: 997;
 }
 
 
@@ -61,7 +62,7 @@ body  {
   margin: 2% 0 20% 0;
   background-color: transparent;
   border-style: hidden;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .sideButtons:hover  {
@@ -106,7 +107,6 @@ a.sideButtons.active {
   border-radius: 1rem 0 0 1rem;
   margin:auto;
   position: relative;
-  z-index: 901;
   text-shadow: none;
 }
 

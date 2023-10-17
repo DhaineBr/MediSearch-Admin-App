@@ -16,7 +16,7 @@
     z-index: 9999;
     overflow: scroll;
   }
-  
+
   .content  {
     width: 100%;
     border-style: hidden;
@@ -27,8 +27,8 @@
     margin-top: 1%;
 
   }
-  
-  
+
+
   .header {
     font-size: 4vw;
     border-style: hidden;
@@ -41,13 +41,13 @@
   th, td  {
     padding: 0 0 1% 0;
   }
-  
+
   .archive-list-container {
     width: 95%;
     background-color: transparent;
     border-radius: 1rem;
-    border-style: hidden;  
-    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;  
+    border-style: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -56,7 +56,7 @@
     overflow-y: scroll;
     max-height: 47.5%;
   }
-  
+
   .archive-list  {
     width: 100%;
     table-layout: auto;
@@ -65,7 +65,7 @@
     padding: 1%;
     margin: auto;
   }
-  
+
   .table-header {
     font-size: 1.75vw;
     color: #55665e;
@@ -75,15 +75,15 @@
     background-color: transparent;
     text-align: left;
   }
-  
-  
+
+
   .table-content  {
     text-align: left;
     font-size: 1.5vw;
     font-weight: 100;
   }
-  
-  
+
+
   .topnav {
     overflow: hidden;
     background-color: transparent;
@@ -92,9 +92,9 @@
     z-index: 10000;
     position: relative;
   }
-  
-  
-      
+
+
+
       .topnav .search-container {
         float: right;
         display: flex;
@@ -103,19 +103,19 @@
         border-style: hidden;
         margin: 0 0 0 0;
       }
-    
-      
+
+
       .topnav input[type="text"] {
         padding: 2% 0 2% 1%;
         border: none;
         margin-right: 0;
         font-size: 1.5vw;
         border-radius: 1rem 0 0 1rem;
-        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0; 
+        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0;
         outline: none;
         width: 90%;
       }
-      
+
       /* Align the button to the right */
       .topnav button {
         float: right;
@@ -123,11 +123,11 @@
         border: none;
         background-color: transparent;
       }
-  
+
       button:hover {
         cursor: pointer;
       }
-      
+
       #searchButton {
         background-color: #04AA6D;
         border-radius: 0 1rem 1rem 0;
@@ -136,13 +136,13 @@
         margin: 0 0 0 0;
         width:10%;
         height: inherit;
-        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0; 
+        box-shadow: rgba(100, 100, 111, 0.2) 0 0.5rem 1rem 0;
       }
-  
+
   input[type="checkbox"]  {
     cursor: pointer;
   }
-  
+
 
   .bottom {
     border-style: hidden;
@@ -158,7 +158,6 @@
     position: relative;
     transition: all 0.5s ease;
     transform: scale(1);
-    text-shadow: 0.05rem 0.05rem 0.10rem ;
   }
 
   .restore:hover {
@@ -176,7 +175,7 @@
     color: white;
     text-shadow: none;
   }
-  
+
   .restore  {
     color: #04AA6D;
     background-color: transparent;
@@ -186,49 +185,90 @@
     color: #AA0441;
     background-color: transparent;
   }
-  
+
       /* For Chrome, Safari, and Opera */
   .archive-list-container::-webkit-scrollbar {
-    width: 6px;
+    width: 0.25rem;
   }
-  
+
   .archive-list-container::-webkit-scrollbar-track {
     background-color: #f1f1f1;
   }
-  
+
   .archive-list-container::-webkit-scrollbar-thumb {
     background-color: #888;
   }
-  
+
   /* For Firefox */
   .archive-list-container {
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
   }
-  
+
   .archive-list-container::-moz-scrollbar {
-    width: 6px;
+    width: 0.25rem;
   }
-  
+
   .archive-list-container::-moz-scrollbar-track {
     background-color: #f1f1f1;
   }
-  
+
   .archive-list-container::-moz-scrollbar-thumb {
     background-color: #888;
   }
-  
-  
+
+
   .container::-webkit-scrollbar {
-    width: 8px;
+    width: 0.25rem;
     background-color: transparent;
   }
-  
+
   .container::-webkit-scrollbar-thumb {
     background-color: #C0C0C0;
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
-  
+
   .container::-webkit-scrollbar-thumb:hover {
     background-color: #A9A9A9;
+  }
+
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 2%;
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+
+    background-color: #04AA6D;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
   }
