@@ -1,10 +1,19 @@
 @import "~leaflet/dist/leaflet.css";
 
-.container {
+button  {
+  cursor: pointer;
+}
+
+* {
   border-style: hidden;
+  outline: none;
+}
+
+.container {
+
   width: 90%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   height: 93%;
   margin: auto;
   background-color: #F8F8EC;
@@ -36,14 +45,13 @@
 .map {
   font-size: 20vw;
   text-align: center;
-  border-style: hidden;
   border-radius: 1rem;
   margin: 1% 0 0 2%;
   height: 70vh;
   background-color: white;
   float: left;
   width: 55%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;  
+  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;
 
   display: flex;
   justify-content: center;
@@ -52,8 +60,8 @@
 }
 
 #map {
-  height: 57.5vh; 
-  border-style: hidden;
+  height: 57.5vh;
+
   width: 90%;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.1rem 0.3rem 0rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.2rem 0rem;
@@ -62,20 +70,20 @@
 .data {
   float: right;
   width: 40%;
-  height: 70vh; 
-  border-style: hidden;
+  height: 70vh;
+
   text-align: center;
   margin: 1% 2% 0 0;
   overflow-y: scroll;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0;
 }
 
 .pharmacy-data  {
   width: 95%;
-  height: 30%; 
-  border-style: hidden;
+  height: 30%;
+
   background-color: white;
   border-radius: 1rem;
   font-size: 2vw;
@@ -90,7 +98,7 @@
 
 .sub-left {
   float: left;
-  border-style: hidden;
+
   width: 20%;
   height: 100%;
   align-items: center;
@@ -100,7 +108,7 @@
 
 .sub-middle {
   float: left;
-  border-style: hidden;
+
   width: 65%;
   padding: 1%;
   height: 100%;
@@ -109,7 +117,10 @@
 
 .sub-right {
   float: left;
-  border-style: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2%;
   width: 6%;
 }
@@ -118,13 +129,11 @@ img {
   width: 100%;
 }
 
-.edit {
+.edit, .archive {
   color:#55665e;
   background-color: transparent;
-  border-style: hidden;
   font-size: 2vw;
   cursor: pointer;
-  
 }
 
 .edit:hover {
@@ -132,6 +141,14 @@ img {
   transition: all 0.5s ease;
   color: blue;
 }
+
+.archive:hover  {
+  transform: scale(1.3);
+  transition: all 0.5s ease;
+  color: #AA0441;
+}
+
+
 
 
 
@@ -154,7 +171,7 @@ img {
 
 .header {
   font-size: 4vw;
-  border-style: hidden;
+
   font-weight: 700;
   width: 95%;
   padding: 1% 2%;
