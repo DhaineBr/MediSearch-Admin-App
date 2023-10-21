@@ -17,7 +17,7 @@ button  {
   height: 93%;
   margin: auto;
   background-color: #F8F8EC;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
@@ -45,14 +45,13 @@ button  {
 .map {
   font-size: 20vw;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin: 1% 0 0 2%;
   height: 70vh;
   background-color: white;
   float: left;
   width: 55%;
   box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 2rem 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,9 +60,8 @@ button  {
 
 #map {
   height: 57.5vh;
-
   width: 90%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.1rem 0.3rem 0rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.2rem 0rem;
 }
 
@@ -71,21 +69,19 @@ button  {
   float: right;
   width: 40%;
   height: 70vh;
-
   text-align: center;
   margin: 1% 2% 0 0;
   overflow-y: scroll;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0 1rem 3rem 0;
 }
 
 .pharmacy-data  {
   width: 95%;
   height: 30%;
-
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 2vw;
   text-align: left;
   margin: auto;
@@ -98,7 +94,6 @@ button  {
 
 .sub-left {
   float: left;
-
   width: 20%;
   height: 100%;
   align-items: center;
@@ -108,7 +103,6 @@ button  {
 
 .sub-middle {
   float: left;
-
   width: 65%;
   padding: 1%;
   height: 100%;
