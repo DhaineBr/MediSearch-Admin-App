@@ -5,7 +5,7 @@
 
     <div class="topnav">
       <div class="search-container">
-        <input type="text" placeholder="Search.." />
+        <input type="text" placeholder="Search.." [(ngModel)]="searchQuery" (input)="filterArchive()"/>
 
         <button id="searchButton">
           <i class="fa-solid fa-magnifying-glass" style="color: white; font-size: 1.25vw"></i>
@@ -17,7 +17,7 @@
       <div class="archive-list-container">
         <table class="archive-list">
           <tr class="table-header">
-            <th style="width:3.65%"><input type="checkbox" matTooltip="Select All"></th>
+            <th style="width:3.65%"><input type="checkbox" matTooltip="Select All" [checked]="selectAll" (click)="toggleSelectAll($event)" class="checkbox"></th>
             <th>User ID</th>
             <th>Pharmacy Name</th>
             <th>Address</th>
@@ -25,21 +25,23 @@
             <th>Date Archived</th>
           </tr>
 
+        <ng-container *ngFor="let archive of filteredArchive">
           <tr class="table-content">
-            <td><input type="checkbox"></td>
-            <td>POMONA</td>
-            <td>BP Generics Express</td>
-            <td>Evangelista Street, Batangas City</td>
-            <td>043-5432</td>
-            <td>09/26/2023</td>
+            <td><input type="checkbox" [checked]="archive.selected" (click)="toggleItemSelection(archive)" class="checkbox"></td>
+            <td>{{archive.userID}}</td>
+            <td>{{archive.pharmacyName}}</td>
+            <td>{{archive.address}}</td>
+            <td>{{archive.contactNo}}</td>
+            <td>{{archive.dateArchived}}</td>
           </tr>
+        </ng-container>
 
         </table>
       </div>
     </div>
     <div class="bottom">
       <button class="restore" matTooltip="Restore"><i class="fa-solid fa-trash-can-arrow-up"></i></button>
-      <button class="delete" matTooltip="Delete"><i class="fa-solid fa-trash-can"></i></button>
+      <button class="delete" matTooltip="Delete" (click)="permanentlyDelete()" id="deleteButton"><i class="fa-solid fa-trash-can"></i></button>
     </div>
   </div>
 </div>

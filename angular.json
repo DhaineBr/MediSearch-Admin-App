@@ -31,7 +31,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/leaflet/dist/leaflet.css" 
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           },
@@ -91,12 +91,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+               {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "assets/"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/leaflet/dist/leaflet.js"
+            ]
           }
         }
       }

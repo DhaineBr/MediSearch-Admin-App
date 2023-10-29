@@ -1,12 +1,8 @@
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
 
 <div class="container">
   <fieldset>
     <legend><img src="./../../assets/MediSearch logo.png" id="logo" /></legend>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <input
         type="email"
         formControlName="email"
@@ -22,7 +18,7 @@
       />
       <br />
       <a routerLink="/home/dashboard"
-        ><button id="loginButton">Login</button></a
+        ><button type="submit" id="loginButton">Login</button></a
       >
     </form>
   </fieldset>

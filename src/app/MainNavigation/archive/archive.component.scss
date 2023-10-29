@@ -14,7 +14,7 @@
     top: 50%;
     left: 53%;
     z-index: 9999;
-    overflow: scroll;
+    overflow: hidden;
   }
 
   .content  {
@@ -54,7 +54,7 @@
     z-index: 902;
     color: black;
     overflow-y: scroll;
-    max-height: 47.5%;
+    height: 50vh;
   }
 
   .archive-list  {
@@ -64,6 +64,7 @@
     z-index: 902;
     padding: 1%;
     margin: auto;
+    max-height: 70%;
   }
 
   .table-header {
@@ -72,7 +73,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: transparent;
+    background-color: white;
     text-align: left;
   }
 
