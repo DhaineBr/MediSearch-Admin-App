@@ -1,31 +1,85 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MapService } from './../map.service';
+import { Component, AfterViewInit, OnInit, ViewChild } from '@angular/core';
+import { AddPharmacyComponent } from './add-pharmacy/add-pharmacy.component';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import * as L from 'leaflet';
+
+interface Pharmacy  {
+  pharmacyName: string;
+  pharmacyAddress: string;
+  pharmacyContactNo: string;
+  coordinates: number
+}
 
 @Component({
   selector: 'app-stores',
   templateUrl: './stores.component.html',
   styleUrls: ['./stores.component.scss']
 })
-export class StoresComponent implements AfterViewInit {
 
-  constructor(private router: Router, private mapService: MapService) {}
+export class StoresComponent implements AfterViewInit {
+  private map: any;
+  // Add a property to store the current marker
+  private currentMarker: L.Marker | null = null;
+
+  private initMap(): void {
+    this.map = L.map('map', {
+      center: [13.758749885834986, 121.05909921598801],
+      zoom: 17
+    });
+
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 30,
+      minZoom: 17,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
+    tiles.addTo(this.map);
+
+    this.map.on('click', (e: L.LeafletMouseEvent) => {
+      this.addMarker(e.latlng);
+      this.addPharmacy(e.latlng)
+    });
+  }
 
 
   ngAfterViewInit(): void {
-    console.log('ngAfterViewInit in component...');
-    const map = this.mapService.getMapInstance();
-    console.log('Map instance:', map);
+    this.initMap();
   }
 
-  navigateToComponent(componentRoute: string): void {
-    this.router.navigate(['/home/map']);
+  addMarker(latlng: L.LatLngExpression): void {
+    const customIcon = L.icon({
+      iconUrl: './../../../assets/10 open store.png',
+      iconSize: [45, 45],
+      iconAnchor: [16, 16]
+    });
+
+    // Remove the current marker if it exists
+    if (this.currentMarker) {
+      this.map.removeLayer(this.currentMarker);
+    }
+
+    this.currentMarker = L.marker(latlng, { icon: customIcon }).addTo(this.map);
   }
 
 
-  openComponentInSameTab() {
-    const componentRoute = '/home/map'; // Replace with your component's route
-    this.navigateToComponent(componentRoute);
+  //Opens up a dialog once the marker was added into the map
+  constructor(public dialog: MatDialog) {}
+
+  addPharmacy(latlng: L.LatLngExpression): void {
+    const dialogRef = this.dialog.open(AddPharmacyComponent, {
+      width: '65vh',
+      height: '56vh',
+      data: { latlng }  // Pass the latlng directly
+    });
   }
+
+  closeDialog() {
+    if (this.currentMarker) {
+      this.map.removeLayer(this.currentMarker);
+    }
+    // Close the dialog
+  }
+
+
 
 }

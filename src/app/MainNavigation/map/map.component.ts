@@ -3,7 +3,7 @@ import { MapService } from './../map.service';
 
 @Component({
   selector: 'app-map',
-  templateUrl: './map.component.html',
+  template: '<div id="map" style="height: 500px;"></div>',
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements AfterViewInit {

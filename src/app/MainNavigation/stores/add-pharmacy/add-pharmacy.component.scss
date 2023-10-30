@@ -1,0 +1,82 @@
+* {
+  text-align: left;
+  border-style: hidden;
+  outline: none;
+}
+
+
+
+h2  {
+  padding: 1% 0 0 7.5%;
+  text-align: center;
+  color: #55665e;
+}
+
+
+
+input[type="text"] {
+  font-size: 1vw;
+  width: 95%;
+  padding: 1%;
+  margin: 0 0 2.5% 0;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0.25rem 0.20rem -0.20rem;
+  color: #55665e;
+  border-radius: 0.25rem;
+}
+.coordinates  {
+  font-size: 1vw;
+  width: 95%;
+  padding: 1% 0;
+  margin: 0 0 2.5% 0;
+  color: #55665e;
+}
+
+
+.buttons  {
+  text-align: center;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+}
+
+span  {
+  float: right;
+  height: 4vh;
+  margin: 0 3% 0 0;
+}
+
+button  {
+  font-size: 1.25vw;
+  opacity: 0.5;
+  color: #AA0441;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover  {
+  opacity: 1;
+}
+
+button[type="submit"] {
+  color: white;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  background-color: #04AA6D;
+  padding: 1% 2%;
+  font-size: 1.5vw;
+  transition: all 0.25s ease;
+  float: right;
+  margin: auto;
+}
+
+button:hover  {
+  opacity: 1;
+}
+
+.submit {
+  width: 100%;
+}
+
+
+

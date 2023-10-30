@@ -6,9 +6,6 @@ import { UsersComponent } from './users/users.component';
 import { StoresComponent } from './stores/stores.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ArchiveComponent } from './archive/archive.component';
-import { EditMapComponent } from './edit-map/edit-map.component';
-import { MapComponent } from './map/map.component';
-
 
 
 const routes: Routes = [
@@ -19,7 +16,6 @@ children:  [
   {path: 'archive', component: ArchiveComponent},
   {path: 'users', component: UsersComponent},
   {path: 'stores', component: StoresComponent},
-  {path: 'map', component: EditMapComponent},
   {path: 'settings', component: SettingsComponent},
 ]},
 ];
