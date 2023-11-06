@@ -16,6 +16,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RestorePharmacyComponent } from './archive/restore-pharmacy/restore-pharmacy.component';
 import { DeletePermanentlyComponent } from './archive/delete-permanently/delete-permanently.component';
 import { AddPharmacyComponent } from './stores/add-pharmacy/add-pharmacy.component';
+import { EditStoreComponent } from './stores/edit-store/edit-store.component';
+
 
 @NgModule({
   declarations: [
@@ -28,8 +30,7 @@ import { AddPharmacyComponent } from './stores/add-pharmacy/add-pharmacy.compone
     RestorePharmacyComponent,
     DeletePermanentlyComponent,
     AddPharmacyComponent,
-
-
+    EditStoreComponent,
   ],
   imports: [
     CommonModule,

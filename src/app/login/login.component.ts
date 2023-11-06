@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClientService } from 'src/app/MainNavigation/http-client.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,26 +9,29 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginForm: FormGroup;
-
   showInputField: boolean = false;
 
-  constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-    });
-  }
+  constructor(
+    private httpClientService: HttpClientService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
-  toggleInputField() {
-    this.showInputField = !this.showInputField;
-  }
+  loginForm = this.formBuilder.group({
+    email: 'admin@domain.com',
+    password: '1234567890',
+    authType: 'admin',
+  });
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-
-  }
-
-
+  async requestLogin() {
+    try {
+      const response = await this.httpClientService.postData(this.loginForm.value);
+      console.log(response.data);
+      // Handle a successful login response here, e.g., store user token and redirect
+      this.router.navigate(['/home/dashboard']); // Redirect to the dashboard or the appropriate route
+    } catch (error) {
+      console.error('Login error:', error);
+      // Handle the error, e.g., show an error message to the user.
+    }
   }
 }

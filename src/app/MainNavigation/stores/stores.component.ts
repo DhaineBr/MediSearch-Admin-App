@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, OnInit, ViewChild } from '@angular/core';
 import { AddPharmacyComponent } from './add-pharmacy/add-pharmacy.component';
+import { EditStoreComponent } from './edit-store/edit-store.component';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import * as L from 'leaflet';
 
@@ -80,6 +81,19 @@ export class StoresComponent implements AfterViewInit {
     // Close the dialog
   }
 
+  openEdit(){
+    const dialogRef = this.dialog.open(EditStoreComponent, {
+      width: '65vh',
+      height: '56vh',
+      data: { }  // Pass the latlng directly
+    });
+  }
 
+  // var map = L.map('map').locate({setView: true, maxZoom: 15});    -- Realtime location
+  // for the map marker
+  //var default_pin = L.marker(['.$row['lat_'].', '.$row['long_'].'], '.$icon.');
+  // default_pin.addTo(map);
+  // var popup1 = default_pin.bindPopup('.$row['q'].' '.$row['id'].', '.$row['lastname'].' '.$row['firstname'].' '.$row['mid'].', '.$row['contact'].' '.$row['q'].');
+  // popup1.addTo(map);
 
 }

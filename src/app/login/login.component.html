@@ -1,12 +1,12 @@
 
 <div class="container">
   <fieldset>
-    <legend><img src="./../../assets/MediSearch logo.png" id="logo" /></legend>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <legend><img src="assets/MediSearch logo.png" id="logo" /></legend>
+    <form [formGroup]="loginForm" (ngSubmit)="requestLogin()">
       <input
         type="email"
         formControlName="email"
-        name="email_ad"
+        name="email"
         placeholder="Email"
       />
       <br />
@@ -17,9 +17,7 @@
         placeholder="Password"
       />
       <br />
-      <a routerLink="/home/dashboard"
-        ><button type="submit" id="loginButton">Login</button></a
-      >
+        <button type="submit" id="loginButton">Login</button>
     </form>
   </fieldset>
 </div>

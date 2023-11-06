@@ -29,7 +29,34 @@
       </div>
     </div>
 
-    <div class="account-details-container">
+    <div class="update-profile">
+      <img [src]="image" class="img-input" alt="Selected Image" *ngIf="image" />
+
+
+      <form #formData="ngForm">
+        <input
+          type="file"
+          name="post-img-input"
+          id="post-img-input"
+          accept=".png, .jpeg, .jpg"
+          (change)="onFileSelected($event)"
+          #fileInput
+          style="display: none;"
+        />
+        <button (click)="fileInput.click()">Choose Image</button>
+
+        <input type="text" placeholder="First name" [(ngModel)]="firstName" name="firstName">
+        <input type="text" placeholder="Last name" [(ngModel)]="lastName" name="lastName">
+        <input type="text" placeholder="Company name" [(ngModel)]="companyName" name="companyName">
+        <input type="text" placeholder="Address" [(ngModel)]="address" name="address">
+        <input type="text" placeholder="Store hours" [(ngModel)]="storeHours" name="storeHours">
+        <input type="text" placeholder="Contact Information" [(ngModel)]="contactInfo" name="contactInfo">
+        <button (click)="saveChanges()">Save Changes</button>
+      </form>
+
+    </div>
+
+    <div class="account-details-container" >
       <div class="container-header">
         <div class="header-text">Account Information</div>
         <div class="button-container">
