@@ -1,38 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Pharmacy  {
-  rank: number;
-  pharmacyName: string;
-  pharmacyAddress: string;
-  rating: number
-}
+import { Pharmacy } from 'src/app/shared/models/pharmacy';
+import { PharmacyService } from 'src/app/shared/services/pharmacy.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   pharmacies: Pharmacy[] = [];
 
+  constructor(private _pharmacy : PharmacyService){}
+
   ngOnInit(): void {
-    this.pharmacies = this.generateDummyData(5);
+    this.getAllPharmacies()
   }
 
-  generateDummyData(count: number): Pharmacy[] {
-    const dummyPharmacy: Pharmacy[] = [];
+  getAllPharmacies() {
+    this._pharmacy.getAllPharmacies().subscribe((response) => {
+      this.pharmacies = Array.isArray(response) ? response : [response];
+      console.log(this.pharmacies);
 
-    for (let i = 1; i <= count; i++) {
-      const pharmacy: Pharmacy = {
-        rank: i,
-        pharmacyName: `Pharmacy Name ` + i,
-        pharmacyAddress: `Brgy ` + i + ` Poblacion, Batangas City`,
-        rating: 5 - (i/100)
-      };
 
-      dummyPharmacy.push(pharmacy);
-    }
-
-    return dummyPharmacy;
+    });
   }
+
 }

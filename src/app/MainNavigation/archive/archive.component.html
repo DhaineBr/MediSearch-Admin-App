@@ -5,7 +5,7 @@
 
     <div class="topnav">
       <div class="search-container">
-        <input type="text" placeholder="Search.." [(ngModel)]="searchQuery" (input)="filterArchive()"/>
+        <input type="text" placeholder="Search.." [(ngModel)]="searchQuery"/>
 
         <button id="searchButton">
           <i class="fa-solid fa-magnifying-glass" style="color: white; font-size: 1.25vw"></i>
@@ -21,18 +21,20 @@
             <th>User ID</th>
             <th>Pharmacy Name</th>
             <th>Address</th>
+            <th>Store Hours</th>
             <th>Contact No.</th>
-            <th>Date Archived</th>
+
           </tr>
 
-        <ng-container *ngFor="let archive of filteredArchive">
+        <ng-container *ngFor="let archive of archives; let i=index">
           <tr class="table-content">
-            <td><input type="checkbox" [checked]="archive.selected" (click)="toggleItemSelection(archive)" class="checkbox"></td>
-            <td>{{archive.userID}}</td>
-            <td>{{archive.pharmacyName}}</td>
+            <td><input type="checkbox" [(ngModel)]="archive.isSelected" (change)="toggleItemSelection(archive)" class="checkbox"></td>
+            <td>{{archive.id}}</td>
+            <td>{{archive.name}}</td>
             <td>{{archive.address}}</td>
-            <td>{{archive.contactNo}}</td>
-            <td>{{archive.dateArchived}}</td>
+            <td>{{archive.storeHours}}</td>
+            <td>{{archive.contactNumber}}</td>
+
           </tr>
         </ng-container>
 
@@ -40,8 +42,8 @@
       </div>
     </div>
     <div class="bottom">
-      <button class="restore" matTooltip="Restore"><i class="fa-solid fa-trash-can-arrow-up"></i></button>
-      <button class="delete" matTooltip="Delete" (click)="permanentlyDelete()" id="deleteButton"><i class="fa-solid fa-trash-can"></i></button>
+      <button class="restore" matTooltip="Restore" (click)="restoreSelectedPharmacy()"><i class="fa-solid fa-trash-can-arrow-up"></i></button>
+      <button class="delete" matTooltip="Delete" (click)="hardDeleteSelectedMedicines()" id="deleteButton"><i class="fa-solid fa-trash-can"></i></button>
     </div>
   </div>
 </div>

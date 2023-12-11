@@ -1,0 +1,33 @@
+<h2>
+  <div class="title">Store Details</div>
+  <div class="close"><button class="close-button" (click)="closeDialog()"><i class="fa-solid fa-circle-xmark"></i></button></div>
+</h2>
+<mat-dialog-content>
+  <div class="container">
+        <div class="left">
+          <div class="map-container">
+            <div id="map1"></div>
+          </div>
+        </div>
+        <div class="left">
+          <label for="name">Branch Name: The Generics Pharmacy</label><br /><br />
+          <label for="contactNo">Contact No: 984-7073</label><br /><br />
+          <div class="store-hours">
+            <div class="sub-left">
+              <label for="closingTime" class="labels">Opening Time: 08:00 AM</label>
+            </div>
+            <div class="sub-right">
+              <label for="closingTime" class="labels">Closing Time: 08:00 PM</label>
+            </div>
+          </div>
+          <br /><br />
+          <label for="storeHours">Email: thegenericspharma@tgp.com</label><br /><br />
+          <label for="password">Password: 5f86177d9217b331e24881356</label><br /><br />
+        </div>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="delete" (click)="closeDialog()">Delete</button>
+  <button class="verify" (click)="closeDialog()">Verify</button>
+</mat-dialog-actions>

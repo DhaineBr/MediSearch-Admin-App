@@ -24,21 +24,24 @@
     </div>
 
     <div class="data">
-      <div class="pharmacy-data">
+      <ng-container *ngFor="let pharmacy of pharmacies">
+      <div *ngIf="pharmacy.user.accountVerified !== false" class="pharmacy-data">
         <div class="sub-left">
           <i class="fa-solid fa-house-medical"></i>
         </div>
 
         <div class="sub-middle">
-          <h3>Dummy Pharmacy</h3>
-          <p>Dummy Address</p>
-          <p>043-12345</p>
+          <h3>{{pharmacy.name}}</h3>
+          <p>{{pharmacy.address}}</p>
+          <p>{{pharmacy.contactNumber}}</p>
         </div>
+
 
         <div class="sub-right">
           <button class="archive"><i class="fa-solid fa-box-archive"></i></button>
         </div>
       </div>
+      </ng-container>
     </div>
 
   </div>

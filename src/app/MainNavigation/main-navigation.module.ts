@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MainNavigationRoutingModule } from './main-navigation-routing.module';
 import { MainNavigationComponent } from './main-navigation.component';
@@ -15,8 +16,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RestorePharmacyComponent } from './archive/restore-pharmacy/restore-pharmacy.component';
 import { DeletePermanentlyComponent } from './archive/delete-permanently/delete-permanently.component';
-import { AddPharmacyComponent } from './stores/add-pharmacy/add-pharmacy.component';
-import { EditStoreComponent } from './stores/edit-store/edit-store.component';
+import { ConfirmationComponent } from './settings/confirmation/confirmation.component';
 
 
 @NgModule({
@@ -29,8 +29,7 @@ import { EditStoreComponent } from './stores/edit-store/edit-store.component';
     ArchiveComponent,
     RestorePharmacyComponent,
     DeletePermanentlyComponent,
-    AddPharmacyComponent,
-    EditStoreComponent,
+    ConfirmationComponent,
   ],
   imports: [
     CommonModule,
@@ -39,7 +38,8 @@ import { EditStoreComponent } from './stores/edit-store/edit-store.component';
     MatSlideToggleModule,
     MatTooltipModule,
     MatDialogModule,
-    LeafletModule
+    LeafletModule,
+    MatSnackBarModule
   ],
 
 })

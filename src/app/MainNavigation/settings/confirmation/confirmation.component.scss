@@ -1,0 +1,80 @@
+* {
+  border-style: solid;
+  border-color: transparent;
+}
+
+button:hover  {
+  cursor: pointer;
+}
+
+.title  {
+  width: 80%;
+  float: left;
+}
+
+.close  {
+  width: 15%;
+  float: right;
+  text-align: right;
+}
+
+.close-button  {
+  color: #AA0441;
+  background-color: transparent;
+  font-size: 2vw;
+}
+
+h2  {
+  font-size: 2.75vw;
+  color: #55665e;
+}
+
+#map1 {
+  height: 58vh;
+  border-radius: 0.5rem;
+  width: 95%;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  margin: auto;
+}
+
+.right{
+  width: 40%;
+  float: right;
+  margin: auto;
+}
+
+.container  {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  font-size: 1.5vw;
+  padding: 5% 0 0 0;
+}
+
+.verify, .delete  {
+  font-size: 1.5vw;
+  opacity: 0.5;
+  border-radius: 0.5rem;
+  padding: 0.5% 1%;
+  margin: auto;
+}
+
+.verify {
+  color: white;
+  background-color: #04AA6D;
+}
+
+.delete {
+  color:#AA0441;
+  background-color: transparent;
+}
+
+.verify:hover, .delete:hover  {
+  opacity: 1;
+}

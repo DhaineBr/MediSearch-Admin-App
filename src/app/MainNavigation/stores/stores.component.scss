@@ -41,6 +41,10 @@ button  {
   background-color: #A9A9A9;
 }
 
+p {
+  font-size: 1.5vw;
+  opacity: 0.75;
+}
 
 .map {
   font-size: 20vw;
@@ -243,12 +247,6 @@ button  {
 input[type="checkbox"]  {
   cursor: pointer;
 }
-
-
-
-
-
-
 
 
 .container::-webkit-scrollbar {

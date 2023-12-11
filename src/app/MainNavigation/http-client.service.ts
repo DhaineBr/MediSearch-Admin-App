@@ -6,10 +6,10 @@ import axios from 'axios';
 })
 export class HttpClientService {
   constructor() {}
-  
+
   public get request() {
     return axios.create({
-      baseURL: 'http://localhost:6565/api',
+      baseURL: 'http://localhost:7000/api',
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json',
@@ -19,10 +19,8 @@ export class HttpClientService {
   }
 
   public postData(data: any) {
-    return this.request.post('http://localhost:6565/api/auth/login', data);
+    return this.request.post('http://localhost:7000/api/auth/login', data);
   }
 
-  //Dashboard module
 
-  //Map module
 }
