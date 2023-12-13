@@ -5,27 +5,27 @@
       <div class="left">
         <div class="container-one">
           <div class="text">
-            <h1>Registered Users</h1>
+            <h1>Registered Pharmacies</h1>
           </div>
           <div class="figure">
             <div class="window">
-              <h2>204</h2>
+              <h2>{{getRegisteredPharmacies()}}</h2>
             </div>
           </div>
         </div>
         <div class="container-two">
           <div class="text">
-            <h1>Reservations Made</h1>
+            <h1>Pharmacies Awaiting Validation</h1>
           </div>
           <div class="figure">
             <div class="window">
-              <h2>61</h2>
+              <h2>{{getUnregisteredPharmacies()}}</h2>
             </div>
           </div>
         </div>
         <div class="container-three">
           <div class="text">
-            <h1>Fulfilled Transactions</h1>
+            <h1>Transactions Today</h1>
           </div>
           <div class="figure">
             <div class="window">
@@ -52,9 +52,9 @@
                 <th>Address</th>
                 <th>Rating</th>
               </tr>
-              <ng-container *ngFor="let pharmacy of pharmacies">
+              <ng-container *ngFor="let pharmacy of pharmacies.slice(0, 5); let rowIndex = index">
               <tr>
-                <td>{{pharmacy.name}}</td>
+                <td>{{i + rowIndex}}</td>
                 <td>{{pharmacy.name}}</td>
                 <td>{{pharmacy.address}}</td>
                 <td>{{pharmacy.name}}</td>

@@ -1,37 +1,47 @@
-import { Component } from '@angular/core';
-import { HttpClientService } from 'src/app/MainNavigation/http-client.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/auth.service';
+import { UserCredentials } from 'src/app/shared/models/user-credentials';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  // Initialize the login form using FormBuilder
+  loginForm: FormGroup;
   showInputField: boolean = false;
+  // public loginForm: FormGroup;
 
   constructor(
-    private httpClientService: HttpClientService,
     private formBuilder: FormBuilder,
+    private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+    this.loginForm = this.formBuilder.group({
+      email: [''],
+      password: ['']
+    });
+  }
 
-  loginForm = this.formBuilder.group({
-    email: 'admin@domain.com',
-    password: '1234567890',
-    authType: 'admin',
-  });
+  ngOnInit(): void {
+  }
 
   async requestLogin() {
-    try {
-      const response = await this.httpClientService.postData(this.loginForm.value);
-      console.log(response.data);
-      // Handle a successful login response here, e.g., store user token and redirect
-      this.router.navigate(['/home/dashboard']); // Redirect to the dashboard or the appropriate route
-    } catch (error) {
-      console.error('Login error:', error);
-      // Handle the error, e.g., show an error message to the user.
-    }
+  }
+
+  login() {
+    const credentials: UserCredentials = this.loginForm.getRawValue();
+    credentials.authType = 'admin';
+    console.log('Login Successful')
+    this.authService.login(credentials).subscribe((response) => {
+      localStorage.setItem('authToken', response.authToken);
+      this.router.navigate(['/home', 'dashboard']);
+    }, (error) => {
+      console.log(error);
+    });
+
   }
 }
