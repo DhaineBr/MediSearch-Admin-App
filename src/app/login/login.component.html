@@ -19,5 +19,9 @@
       <br />
         <button type="submit" id="loginButton" (click)="login()">Login</button>
     </form>
+
+    <div *ngIf="loading" class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
   </fieldset>
 </div>

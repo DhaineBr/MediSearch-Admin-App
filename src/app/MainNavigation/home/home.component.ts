@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Pharmacy } from 'src/app/shared/models/pharmacy';
+import { Order } from 'src/app/shared/models/order';
 import { PharmacyService } from 'src/app/shared/services/pharmacy.service';
-
+import { OrderService } from 'src/app/shared/services/order.service';
 
 
 @Component({
@@ -11,8 +12,10 @@ import { PharmacyService } from 'src/app/shared/services/pharmacy.service';
 })
 export class HomeComponent implements OnInit{
   pharmacies: Pharmacy[] = [];
+  orders: Order[] = [];
 
-  constructor(private _pharmacy : PharmacyService){}
+  constructor(private _pharmacy : PharmacyService,
+    private _order : OrderService){}
 
   ngOnInit(): void {
     this.getAllPharmacies()
@@ -24,6 +27,24 @@ export class HomeComponent implements OnInit{
       console.log(this.pharmacies);
     });
   }
+
+  getAllOrders() {
+    this._order.getAllOrders().subscribe((response) => {
+      this.orders = Array.isArray(response) ? response : [response];
+      console.log(this.orders);
+    });
+  }
+
+  isFulfilled(isFulfilled: boolean){
+    return isFulfilled == true;
+  }
+
+  getTransactionCount(): number {
+    return this.orders.filter((order) =>
+    this.isFulfilled(order.isFulfilled)
+  ).length;
+  }
+
   i = 1;
   count(loopCount: number) {
     for (let j = 0; j < loopCount; j++) {
